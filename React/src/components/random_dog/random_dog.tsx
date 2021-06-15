@@ -13,9 +13,11 @@ class RandomDogComponent extends React.Component<any, any> {
     }
 
     render() {
+        const randomDogImage = this.props.randomDog ? <img src={this.props.randomDog.message} alt="random_dog_img" /> : null;
         return (
             <>
-                <button onClick={this.onClick}>Get Random Dog!</button>
+                    <button className="random-dog-button" onClick={this.onClick}>Get Random Dog!</button>
+                    {randomDogImage}
             </>
         )
     }

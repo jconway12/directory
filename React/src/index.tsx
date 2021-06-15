@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import App from './app';
+import Root from './root';
 import configureStore from './store/store';
 declare global {
     interface Window {
@@ -21,5 +21,5 @@ document.addEventListener('DOMContentLoaded', () => {
     window.getState = store.getState;
 
     // Render root element with store in static root element
-    ReactDOM.render(<App store={store} compiler="TypeScript" framework="React" />, root);
+    ReactDOM.render(<Root store={store} compiler="TypeScript" framework="React" />, root);
 })

@@ -1,17 +1,22 @@
 import React from "react";
 import './styles/styles.css';
-import IMAGE from './assets/logo.png';
-import { Provider } from 'react-redux';
+import { Route, Switch } from 'react-router-dom';
 import RandomDogContainer from './components/random_dog/random_dog_container';
+import HomepageComponent from './components/homepage/homepage';
+import BreedListContainer from "./components/breed_list/breed_list_container";
+import DogByBreedContainer from "./components/dog_by_breed/dog_by_breed_container";
 
 // Wraps app component with store and router
 const App = ({ store }) => {
     return (
-        <Provider store={store}>
-            <h1>React App</h1>
-            <RandomDogContainer />
-            <img src={IMAGE} alt='logo' />
-        </Provider>
+        <>
+        <HomepageComponent />
+        <Switch>
+            <BreedListContainer path="/breed-list" />
+            <DogByBreedContainer path={["/dog-by-breed", "/dog-by-breed?breed=:searchValue"]} />
+            <RandomDogContainer path="/" />
+        </Switch>
+        </>
     )
 }
 

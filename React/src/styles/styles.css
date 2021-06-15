@@ -1,3 +1,44 @@
+body {
+    background-color: white;
+}
+
 h1 {
-    color: pink;
+    color: hotpink;
+}
+
+button {
+    margin: 50px;
+    width: 200px;
+    padding: 20px;
+    background-color: pink;
+    border-color: pink;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+}
+
+img[alt*="random_dog_img"] {
+    width: 400px;
+    position: absolute;
+    top: 100px;
+    left: 350px;
+}
+
+img[alt*="logo"] {
+    width: 100px;
+}
+
+.flex-horizontal {
+    display: flex;
+}
+
+.flex-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.random-dog-button {
+    position: absolute;
+    left: 50px;
+    top: 50px;
 }
